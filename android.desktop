@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Android Studio
+Exec=/opt/android-studio/android-studio/bin/studio.sh %U
+Icon=/opt/android-studio/android-studio/bin/studio.png
+Terminal=false
+Type=Application
+Categories=Development;
