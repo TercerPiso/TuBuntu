@@ -60,7 +60,7 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Super&gt;t" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;f" type="string" value="thunar"/>
-      <property name="&lt;Super&gt;c" type="string" value="brave"/>
+      <property name="&lt;Super&gt;c" type="string" value="brave-browser"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
