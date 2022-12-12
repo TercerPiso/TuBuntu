@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Hack 12
+FontName=Hack Nerd Font 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
