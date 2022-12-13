@@ -108,7 +108,7 @@ cp ./configs/xconf/xfwm4.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm
 cp ./configs/xconf/xsettings.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 mkdir -p $HOME/.config/xfce4/terminal
 cp ./configs/terminalrc.txt $HOME/.config/xfce4/terminal/terminalrc
-sudo apt -y install gtk2-engines-murrine gtk2-engines-pixbuf sassc
+sudo apt -y install gtk2-engines-murrine gtk2-engines-pixbuf sassc filezilla
 cd Qogir
 ./install.sh --tweaks round
 cd ../Qogir-icon
