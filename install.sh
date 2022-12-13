@@ -125,3 +125,4 @@ sudo cp ./configs/sudo.plugin.zsh /usr/share/zsh-sudo/sudo.plugin.zsh
 sudo cp ./configs/wallpaper.png /usr/share/backgrounds/xfce/wallpaper.png
 sudo cp ./configs/vconsole.conf /etc/vconsole.conf
 p10k configure
+sudo snap install spotify
