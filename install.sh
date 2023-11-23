@@ -42,15 +42,12 @@ sudo apt -y install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt -y install python3.8 python-is-python3
-# https://slack.com/intl/es-ar/downloads/instructions/ubuntu
-wget 'https://downloads.slack-edge.com/releases/linux/4.29.149/prod/x64/slack-desktop-4.29.149-amd64.deb'
-sudo gdebi ./slack-desktop-*.deb
 sudo apt install v4l2loopback-dkms
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt -y install obs-studio
-wget 'https://downloads.mongodb.com/compass/mongodb-compass_1.34.1_amd64.deb'
-sudo gdebi mongodb-compass_1.34.1_amd64.deb
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
+sudo dpkg -i mongodb-compass_1.40.4_amd64.deb
 wget -O ./postman.tar.gz 'https://dl.pstmn.io/download/latest/linux64'
 sudo mkdir /opt/postman
 sudo chmod 777 /opt/postman
@@ -67,7 +64,7 @@ cp android.desktop ~/.local/share/applications/Android.desktop
 wget -O ./code.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 sudo gdebi code.deb
 sudo apt -y install htop gparted gimp vlc mc neofetch gcc default-jre unrar
-wget -O ./intellij.tar.gz 'https://download.jetbrains.com/idea/ideaIC-2022.3.tar.gz'
+wget -O ./intellij.tar.gz 'https://download.jetbrains.com/idea/ideaIC-2023.2.5.tar.gz'
 sudo mkdir /opt/intellij
 sudo chmod 777 /opt/intellij
 tar -xvf ./intellij.tar.gz -C /opt/intellij
@@ -122,7 +119,6 @@ cp configs/.zshrc ~/.zshrc
 sudo mkdir "/usr/share/zsh-sudo/"
 chsh -s $(which zsh)
 sudo cp ./configs/sudo.plugin.zsh /usr/share/zsh-sudo/sudo.plugin.zsh
-sudo cp ./configs/wallpaper.png /usr/share/backgrounds/xfce/wallpaper.png
 sudo cp ./configs/vconsole.conf /etc/vconsole.conf
 p10k configure
 sudo snap install spotify
