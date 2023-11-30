@@ -10,24 +10,19 @@ echo -ne "
                        Core dependencies
 -------------------------------------------------------------------------
 "
+sudo sh -c "echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.conf"
+sudo sh -c "echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> /etc/sysctl.conf"
+sudo sh -c "echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> /etc/sysctl.conf"
+sudo sysctl -p
 sudo apt update
 sudo apt upgrade
-sudo apt install curl
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt -y install brave-browser
-sudo apt update
-sudo apt install brave-browser -y
-sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
-sudo apt update
-sudo apt -y install qbittorrent
+sudo apt -y install curl gdebi-core
+wget 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+sudo -n gdebi ./google-chrome-stable_current_amd64.deb
 sudo apt -y install udisks2
 wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip'
 unzip DroidSansMono.zip -d ~/.fonts
-fc-cache -fv
-sudo apt -y install git
-sudo apt -y install curl
+fc-cache - -nfv
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 source ~/.bashrc
 nvm install --lts
@@ -35,39 +30,65 @@ sudo apt-get install zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 chsh -s /usr/bin/zsh
-sudo apt -y install gdebi-core
 wget -O ./discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-sudo gdebi ./discord.deb
+sudo gdebi -n ./discord.deb
 sudo apt -y install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt update
 sudo apt -y install python3.8 python-is-python3
-sudo apt install v4l2loopback-dkms
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt -y install v4l2loopback-dkms
+sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt update
 sudo apt -y install obs-studio
-wget https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
-sudo dpkg -i mongodb-compass_1.40.4_amd64.deb
+wget -O ./mongodb-compass.deb https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
+sudo gdebi -n mongodb-compass.deb
 wget -O ./postman.tar.gz 'https://dl.pstmn.io/download/latest/linux64'
 sudo mkdir /opt/postman
 sudo chmod 777 /opt/postman
 tar -xvf postman.tar.gz -C /opt/postman
+mkdir ~/.local/share/applications
 cp Postman.desktop ~/.local/share/applications/Postman.desktop
 sudo apt -y install libc6 libncurses5 libstdc++6 lib32z1 libbz2-1.0
-brave-browser https://developer.android.com/studio/
 echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
-read -n1 -s -r -p $'Press enter to continue...\n' key
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD ANDROID STUDIO BEFORE CONTINUE //////////////
+echo Descarga el zip y cerra el navegador cuando termine de descargar
+google-chrome https://developer.android.com/studio/
+read -n1 -s -r -p $'Presiona enter si bajaste el zip...\n' key
 sudo mkdir /opt/android-studio
 sudo chmod 777 /opt/android-studio
+tar -xvf ~/Descargas/android-studio-*.tar.gz -C /opt/android-studio
+tar -xvf ~/Downloads/android-studio-*.tar.gz -C /opt/android-studio
 tar -xvf ./android-studio-*.tar.gz -C /opt/android-studio
 cp android.desktop ~/.local/share/applications/Android.desktop
 wget -O ./code.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-sudo gdebi code.deb
+sudo gdebi -n code.deb
 sudo apt -y install htop gparted gimp vlc mc neofetch gcc default-jre unrar
-wget -O ./intellij.tar.gz 'https://download.jetbrains.com/idea/ideaIC-2023.2.5.tar.gz'
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo /////////// DOWNLOAD INTELLIJ IDEA BEFORE CONTINUE //////////////
+echo Descarga el zip y cerra el navegador cuando termine de descargar
+google-chrome https://www.jetbrains.com/idea/download/?section=linux
+read -n1 -s -r -p $'Presiona enter si bajaste el zip...\n' key
 sudo mkdir /opt/intellij
 sudo chmod 777 /opt/intellij
-tar -xvf ./intellij.tar.gz -C /opt/intellij
+tar -xvf ~/Descargas/ideaIC-*.tar.gz -C /opt/intellij
+tar -xvf ~/Downloads/ideaIC-*.tar.gz -C /opt/intellij
+tar -xvf ./ideaIC-*.tar.gz -C /opt/intellij
+mv /opt/intellij/idea-IC-* /opt/intellij/idea-IC
 cp Intellij.desktop ~/.local/share/applications/Intellij.desktop
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -79,6 +100,8 @@ sudo sh -c 'echo "deb https://hub.unity3d.com/linux/repos/deb stable main" > /et
 wget -qO - https://hub.unity3d.com/linux/keys/public | sudo apt-key add -
 sudo apt update
 sudo apt -y install unityhub
+wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo gdebi -n dbeaver-ce_latest_amd64.deb
 echo -ne "
 -------------------------------------------------------------------------
  _____                           ___ _           
@@ -114,11 +137,13 @@ cd ..
 cp -R fonts $HOME/.local/share
 sudo localectl set-locale LANG=es_ES.UTF-8
 sudo systemctl enable docker
-sudo add-apt-repository ppa:agornostal/ulauncher && sudo apt update && sudo apt -y install ulauncher
+sudo add-apt-repository -y ppa:agornostal/ulauncher && sudo apt update && sudo apt -y install ulauncher
 cp configs/.zshrc ~/.zshrc
 sudo mkdir "/usr/share/zsh-sudo/"
 chsh -s $(which zsh)
 sudo cp ./configs/sudo.plugin.zsh /usr/share/zsh-sudo/sudo.plugin.zsh
 sudo cp ./configs/vconsole.conf /etc/vconsole.conf
-p10k configure
 sudo snap install spotify
+echo Presione enter para reiniciar la pc y luego ejecute el comando a mano: p10k configure
+read
+sudo reboot
