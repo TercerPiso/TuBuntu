@@ -95,6 +95,7 @@ sudo cp ./configs/sudo.plugin.zsh /usr/share/zsh-sudo/sudo.plugin.zsh
 sudo cp ./configs/vconsole.conf /etc/vconsole.conf
 cp configs/.zshrc ~/.zshrc
 sudo mkdir /opt/wallpapers
+sudo chmod 777 /opt/wallpapers
 sudo cp -R ./wallpapers/* /opt/wallpapers
 gsettings set org.gnome.desktop.background picture-uri-dark file:///opt/wallpapers/new/18.png
 echo -ne "
