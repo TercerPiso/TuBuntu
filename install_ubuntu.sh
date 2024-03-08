@@ -19,9 +19,8 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo sh -c 'echo "deb https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 wget -qO - https://hub.unity3d.com/linux/keys/public | sudo apt-key add -
-sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo apt update
-sudo apt -y install apt-transport-https ca-certificates curl software-properties-common gdebi-core udisks2 zsh software-properties-common python3.8 python-is-python3 docker-ce docker-compose unityhub v4l2loopback-dkms obs-studio libc6 libncurses5 libstdc++6 lib32z1 libbz2-1.0 htop gparted gimp vlc mc neofetch gcc default-jre unrar gtk2-engines-murrine gtk2-engines-pixbuf sassc filezilla ulauncher
+sudo apt -y install apt-transport-https ca-certificates curl software-properties-common gdebi-core udisks2 zsh software-properties-common python3.8 python-is-python3 docker-ce docker-compose unityhub v4l2loopback-dkms obs-studio libc6 libncurses5 libstdc++6 lib32z1 libbz2-1.0 htop gparted gimp vlc mc neofetch gcc default-jre unrar gtk2-engines-murrine gtk2-engines-pixbuf sassc filezilla
 sudo usermod -aG docker ${USER}
 wget 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
 sudo -n gdebi ./google-chrome-stable_current_amd64.deb
