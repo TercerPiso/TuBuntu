@@ -12,6 +12,7 @@ echo -ne "
 "
 sudo apt update
 sudo apt upgrade
+sudo apt -y install curl
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo add-apt-repository -y ppa:deadsnakes/ppa
@@ -20,7 +21,7 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 wget -qO - https://hub.unity3d.com/linux/keys/public | sudo apt-key add -
 sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo apt update
-sudo apt -y install curl apt-transport-https ca-certificates curl software-properties-common gdebi-core udisks2 zsh software-properties-common python3.8 python-is-python3 docker-ce docker-compose unityhub v4l2loopback-dkms obs-studio libc6 libncurses5 libstdc++6 lib32z1 libbz2-1.0 htop gparted gimp vlc mc neofetch gcc default-jre unrar gtk2-engines-murrine gtk2-engines-pixbuf sassc filezilla ulauncher
+sudo apt -y install apt-transport-https ca-certificates curl software-properties-common gdebi-core udisks2 zsh software-properties-common python3.8 python-is-python3 docker-ce docker-compose unityhub v4l2loopback-dkms obs-studio libc6 libncurses5 libstdc++6 lib32z1 libbz2-1.0 htop gparted gimp vlc mc neofetch gcc default-jre unrar gtk2-engines-murrine gtk2-engines-pixbuf sassc filezilla ulauncher
 sudo usermod -aG docker ${USER}
 wget 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
 sudo -n gdebi ./google-chrome-stable_current_amd64.deb
