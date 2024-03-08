@@ -97,8 +97,8 @@ cp configs/.zshrc ~/.zshrc
 sudo mkdir /opt/wallpapers
 sudo chmod 777 /opt/wallpapers
 sudo cp -R ./wallpapers/* /opt/wallpapers
-gsettings set org.gnome.desktop.background picture-uri-dark file:///opt/wallpapers/new/18.png
-gsettings set org.gnome.desktop.background picture-uri file:///opt/wallpapers/new/18.png
+gsettings set org.gnome.desktop.background picture-uri-dark file:///opt/wallpapers/new/20.png
+gsettings set org.gnome.desktop.background picture-uri file:///opt/wallpapers/new/20.png
 echo -ne "
 ---------------------------------------------------------
      _____                           ___ _           
